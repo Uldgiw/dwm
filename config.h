@@ -31,9 +31,10 @@ static char col3[]            = "#ffffff";
 static char col4[]            = "#ffffff";
 static char col5[]            = "#ffffff";
 static char col6[]            = "#ffffff";
+static char col8[]            = "#ffffff";
 
 enum { SchemeNorm, SchemeCol1, SchemeCol2, SchemeCol3, SchemeCol4,
-       SchemeCol5, SchemeCol6, SchemeSel }; /* color schemes */
+       SchemeCol5, SchemeCol6, SchemeSel, SchemeOcc, SchemeUrg }; /* color schemes */
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -45,6 +46,8 @@ static const char *colors[][3]      = {
 	[SchemeCol5] = { col5,        normbgcolor, normbordercolor },
 	[SchemeCol6] = { col6,        normbgcolor, normbordercolor },
         [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+	[SchemeOcc]  = { normfgcolor, col8,        normbordercolor },
+	[SchemeUrg]  = { normfgcolor, col3,        normbordercolor },
 };
 
 static const char *const autostart[] = {
